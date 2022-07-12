@@ -6,6 +6,7 @@ require "./config.cgi";
 my @rtrs = getRtrs();
 my ($sshuser, $sshpass) = getUserPass();
 my $tempdir = getTempDir();
+my $sitetitle = getSiteTitle();
 mkdir($tempdir) unless (-d $tempdir);
 
 
@@ -210,7 +211,7 @@ span {
 <script src='mroute.js'></script> 
 </head>
 <body>
-<h1>BCN Multicast Spy</h1>
+<h1>$sitetitle</h1>
 Scanned: $rtrs
 
 <table border id='list'>

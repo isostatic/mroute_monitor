@@ -1,11 +1,13 @@
 #!/usr/bin/perl
 use strict;
 
+my $title = "Multicast Spy";
 my @rtrs = qw/rtr1 rtr2/;
 my $sshpass = "secretepass";
 my $sshuser = "limiteduser";
 my $tempdir = "/var/tmp/mroute";
 
+sub getSiteTitle { return $title; }
 sub getRtrs { return @rtrs; }
 sub getUserPass { return ($sshuser, $sshpass); }
 sub getTempDir { return $tempdir; }
